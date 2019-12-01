@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    "@material-ui/core": "^3.9.4",
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "chalk": "1.1.3",
