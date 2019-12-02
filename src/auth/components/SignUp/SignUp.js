@@ -35,7 +35,7 @@ validate = () => {
     passwordError = 'Insufficient characters'
   }
 
-  if (!this.state.confirmPassword !== this.state.password) {
+  if (this.state.passwordConfirmation !== this.state.password) {
     confirmPasswordError = 'Passwords do not match'
   }
 
