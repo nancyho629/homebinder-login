@@ -58,57 +58,57 @@ handleSubmit = event => {
 
 render () {
   return (
-    <div className="row">
-      <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h3>Sign Up</h3>
-        <Form onSubmit={this.handleSubmit}>
-          <div>
-            <Form.Group controlId='email'>
-              <Form.Label>Email Address</Form.Label>
-              <Form.Control
-                required
-                name="email"
-                placeholder="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-              />
-              <div style={{ fontSize: 12, color: 'red' }}>
-                {this.state.emailError}
-              </div>
-            </Form.Group>
+    <div className='Form'>
+      <h3>Sign Up</h3>
+      <Form onSubmit={this.handleSubmit}>
+        <div>
+          <Form.Group controlId='email'>
+            <Form.Label>Email Address: </Form.Label>
+            <Form.Control
+              required
+              type="email"
+              name="email"
+              placeholder="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+            <div style={{ fontSize: 12, color: 'red', backgroundColor: 'white' }}>
+              {this.state.emailError}
+            </div>
+          </Form.Group>
+        </div>
+        <Form.Group controlId='password'>
+          <Form.Label>Password: </Form.Label>
+          <Form.Control
+            required
+            type="password"
+            name="password"
+            placeholder="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+          <div style={{ fontSize: 12, color: 'red' }}>
+            {this.state.passwordError}
           </div>
-          <Form.Group controlId='password'>
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              required
-              type="password"
-              name="password"
-              placeholder="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-            <div style={{ fontSize: 12, color: 'red' }}>
-              {this.state.passwordError}
-            </div>
-          </Form.Group>
-          <Form.Group controlId="passwordConfirmation">
-            <Form.Label>Password Confirmation</Form.Label>
-            <Form.Control
-              required
-              name="passwordConfirmation"
-              value={this.state.passwordConfirmation}
-              type="password"
-              placeholder="Confirm Password"
-              onChange={this.handleChange}
-            />
-            <div style={{ fontSize: 12, color: 'red' }}>
-              {this.state.confirmPasswordError}
-            </div>
-          </Form.Group>
-          <Button variant='primary' type="submit">Submit</Button>
-        </Form>
-      </div>
+        </Form.Group>
+        <Form.Group controlId="passwordConfirmation">
+          <Form.Label>Password Confirmation: </Form.Label>
+          <Form.Control
+            required
+            name="passwordConfirmation"
+            value={this.state.passwordConfirmation}
+            type="password"
+            placeholder="Confirm Password"
+            onChange={this.handleChange}
+          />
+          <div style={{ fontSize: 12, color: 'red', backgroundColor: 'white' }}>
+            {this.state.confirmPasswordError}
+          </div>
+        </Form.Group>
+        <Button variant='primary' type="submit">Submit</Button>
+      </Form>
     </div>
+
   )
 }
 }

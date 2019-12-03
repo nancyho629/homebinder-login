@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 const initialState = {
   email: '',
   password: '',
@@ -51,38 +54,38 @@ handleSubmit = event => {
 
 render () {
   return (
-    <div className="row">
-      <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h3>Sign In</h3>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group controlId='email'>
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control
-              name="email"
-              placeholder="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-            <div style={{ fontSize: 12, color: 'red' }}>
-              {this.state.emailError}
-            </div>
-          </Form.Group>
-          <Form.Group controlId='password'>
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              name="password"
-              placeholder="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-            <div style={{ fontSize: 12, color: 'red' }}>
-              {this.state.passwordError}
-            </div>
-          </Form.Group>
-          <Button variant='primary' type="submit">Submit</Button>
-        </Form>
-      </div>
+    <div className='Form'>
+      <h3>Sign In</h3>
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Group controlId='email'>
+          <Form.Label>Email Address: </Form.Label>
+          <Form.Control
+            type='email'
+            name='email'
+            placeholder='email'
+            value={this.state.email}
+            onChange={this.handleChange}
+          />
+          <div style={{ fontSize: 12, color: 'red', backgroundColor: 'white' }}>
+            {this.state.emailError}
+          </div>
+        </Form.Group>
+        <Form.Group controlId='password'>
+          <Form.Label>Password: </Form.Label>
+          <Form.Control
+            type='password'
+            name='password'
+            placeholder='password'
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+          <div style={{ fontSize: 12, color: 'red', backgroundColor: 'white' }}>
+            {this.state.passwordError}
+          </div>
+        </Form.Group>
+        <Button variant='primary' type='submit'>Submit</Button>
+      </Form>
+      <Link to={'/forgot-pw'} className='FormField__Link'>Forgot password?</Link>
     </div>
   )
 }
