@@ -25,10 +25,10 @@ class App extends Component {
         <div className='App'>
           <div className='App__Aside'>
             Homebinder
-            <img className='DashboardImg' src={require('./imgs/dashboardDesktop.png')} />
+            <img className='DashboardImg' src={require('./imgs/dashboardDesktop.png')} alt='Homebinder dashboard'/>
           </div>
           <div className='App__Form'>
-            <img className='FormLogo' src={require('./imgs/hbWhiteLogo.png')} />
+            <img className='FormLogo' src={require('./imgs/hbWhiteLogo.png')} alt='Homebinder White Logo'/>
             <div className='FormTitle'>
               <NavLink to='/sign-up' activeClassName='FormTitle__Link--Active' className='FormTitle__Link'>Sign Up</NavLink> or <NavLink exact to='/' activeClassName='FormTitle__Link--Active' className='FormTitle__Link'>Sign In</NavLink>
             </div>
