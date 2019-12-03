@@ -1,48 +1,108 @@
-$success: #c7f282;
-$warning: #f1e681;
-$error: #f08181;
-$charcoal: #ccc;
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
 
-.flash-success,
-.flash-warning,
-.flash-error {
-  border: 1px solid $charcoal;
-  display: block;
-  left: 25%;
-  padding: 30px;
-  position: fixed;
-  text-align: center;
-  top: 15%;
-  width: 50%;
-  z-index: 1;
-}
-
-.flash-success {
-  background-color: $success;
-}
-
-.flash-warning {
-  background-color: $warning;
-}
-
-.flash-error {
-  background-color: $error;
-}
-
-.auth-form {
+.App {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  color: white;
+}
+
+.App__Aside {
+  width: 50%;
+  background-color: #FFFFF;
+}
+
+
+.App__Form {
+  width: 50%;
+  background-color: #f63;
+  padding: 125px 40px;
+  overflow: auto;
+}
+
+.DashboardImg {
+  background-size: contain;
+}
+
+.FormCenter {
+  margin-bottom: 100px;
+}
+
+.FormLogo {
+  display: flex;
   justify-content: center;
-  margin: 15% auto 0;
-  max-width: 600px;
+  margin-left: 43%;
+  padding-bottom: 10px;
+}
 
-  h3,
-  input {
-    margin-bottom: 5%;
-  }
+.FormTitle {
+  color: #707C8B;
+  font-weight: 300;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
 
-  button {
-    align-self: flex-end;
-    max-width: 200px;
-  }
+.FormTitle__Link {
+  color: #707C8B;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7em;
+  margin: 0 10px;
+  padding-bottom: 5px;
+}
+
+.FormTitle__Link:first-child {
+  margin-left: 0;
+}
+
+.FormTitle__Link--Active {
+  color: white;
+  border-bottom: 1px solid #199087;
+}
+
+.FormField {
+  margin-bottom: 40px;
+}
+
+.FormField__Label {
+  display: block;
+  text-transform: uppercase;
+  font-size: .9em;
+  color: white;
+}
+.FormField__Input {
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.FormField__Input::placeholder {
+  color: #616E7F;
+}
+
+.FormField__Button {
+  background-color: #52C4B9;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 15px 70px;
+  font-size: .8em;
+  font-weight: 500;
+}
+
+.FormField__Link {
+  color: #66707D;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1.5px solid #225E62;
+  padding-bottom: 5px;
+  padding-top: 10px;
 }
