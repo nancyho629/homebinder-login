@@ -12,6 +12,7 @@ Simple login page with user error messaging and validation.
 * Fix styling of the dashboard image
 * Implement simple user feedback for successful submission
 * Utilize Regex for password validation
+* Implement HomeBinder favicon in the tab
 
 ## Setup and Installation
 1.  Fork and clone this repository.
