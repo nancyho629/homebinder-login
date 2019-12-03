@@ -87,7 +87,7 @@ render () {
             value={this.state.password}
             onChange={this.handleChange}
           />
-          <div style={{ fontSize: 12, color: 'red' }}>
+          <div style={{ fontSize: 12, color: 'red', backgroundColor: 'white' }}>
             {this.state.passwordError}
           </div>
         </Form.Group>
