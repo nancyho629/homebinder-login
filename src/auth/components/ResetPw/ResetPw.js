@@ -45,7 +45,7 @@ render () {
   return (
     <div className='Form'>
       <h3>Forgot your password?</h3>
-      <h4>No worries! We&quot;ll send you a link to reset your password!</h4>
+      <h4>No worries! We&apos;ll send you a link to reset your password!</h4>
       <Form onSubmit={this.handleSubmit}>
         <Form.Group controlId='email'>
           <Form.Label>Email Address: </Form.Label>
