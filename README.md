@@ -1,4 +1,4 @@
-# Homebinder Login
+# HomeBinder Login
 Simple login page with user error messaging and validation.
 
 # Technologies Used
